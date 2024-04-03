@@ -42,5 +42,4 @@ jobs:
             pip install -r requirements.txt
             cd /home/ubuntu/app2/cicd-test/drf_test
 
-            python3 manage.py collectstatic
             sudo systemctl restart site.service
