@@ -39,7 +39,8 @@ jobs:
 
             source venv/bin/activate
 
+            pip install -r requirements.txt
             cd /home/ubuntu/app2/cicd-test/drf_test
 
-            pip install -r requirements.txt
+            python3 manage.py collectstatic
             sudo systemctl restart site.service
