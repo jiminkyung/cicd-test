@@ -34,11 +34,12 @@ jobs:
             cd /home/ubuntu/app2/cicd-test
             git pull main main
 
-            cd /home/ubuntu/app2/cicd-test/drf_test
-
             echo "SECRET_KEY=\"${{ secrets.SECRET_KEY }}\"" > .env
             echo "DEBUG='${{ secrets.DEBUG }}'" >> .env
 
             source venv/bin/activate
+
+            cd /home/ubuntu/app2/cicd-test/drf_test
+
             pip install -r requirements.txt
             sudo systemctl restart site.service
