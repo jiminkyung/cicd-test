@@ -35,7 +35,7 @@ jobs:
             git pull origin main
 
             echo "SECRET_KEY=\"${{ secrets.SECRET_KEY }}\"" > .env
-            echo "DEBUG='${{ secrets.DEBUG }}'" > .env
+            echo "DEBUG='${{ secrets.DEBUG }}'" >> .env
 
             source venv/bin/activate
 
