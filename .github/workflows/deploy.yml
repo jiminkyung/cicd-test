@@ -31,8 +31,10 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             set -e
-            cd /home/ubuntu/app2/cicd-test/drf_test
+            cd /home/ubuntu/app2/cicd-test
             git pull main main
+
+            cd /home/ubuntu/app2/cicd-test/drf_test
 
             echo "SECRET_KEY=\"${{ secrets.SECRET_KEY }}\"" > .env
             echo "DEBUG='${{ secrets.DEBUG }}'" >> .env
